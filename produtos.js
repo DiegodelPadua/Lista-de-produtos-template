@@ -1,6 +1,6 @@
 'use strict'
 
-const listaProdutos = [
+export const listaProdutos = [
   {
     "id": 1,
     "nome": "Notebook Dell Inspiron 15 3000",
@@ -92,3 +92,4 @@ const listaProdutos = [
     "classificacao": 4
   }
 ]
+

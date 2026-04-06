@@ -1,5 +1,214 @@
+/* O seletor * seleciona todos os elementos da página */
 * {
     padding: 0;
+    /* Remove o espaçamento interno padrão dos elementos */
+
     margin: 0;
+    /* Remove o espaçamento externo padrão dos elementos */
+
     box-sizing: border-box;
+    /* Faz com que padding e border entrem no cálculo total da largura e altura
+       Isso facilita muito o controle do layout */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Define a fonte principal da página */
+
+    background-color: #f5f5f5;
+    /* Cor de fundo geral da página: cinza bem claro */
+
+    color: #111;
+    /* Cor padrão dos textos: quase preto */
+}
+
+.cabecalho {
+    background-color: #111;
+    /* Fundo preto no cabeçalho */
+
+    color: #ffcc00;
+    /* Cor amarela para o texto principal do cabeçalho */
+
+    text-align: center;
+    /* Centraliza o conteúdo do cabeçalho horizontalmente */
+
+    padding: 32px 20px;
+    /* Espaçamento interno:
+       32px em cima e embaixo
+       20px nas laterais */
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Cria uma sombra abaixo do cabeçalho para destacar */
+}
+
+.cabecalho h1 {
+    font-size: 2.2rem;
+    /* Aumenta o tamanho do título principal */
+
+    margin-bottom: 8px;
+    /* Cria um espaço entre o h1 e o parágrafo abaixo */
+}
+
+.cabecalho p {
+    font-size: 1rem;
+    /* Tamanho normal para o subtítulo */
+
+    color: #ffffff;
+    /* Deixa o subtítulo branco */
+}
+
+.principal {
+    padding: 32px;
+    /* Espaçamento interno na área principal da página */
+}
+
+.container-produtos {
+    display: grid;
+    /* Ativa o modo grid para organizar os cards */
+
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* Cria colunas automáticas
+       Cada card terá no mínimo 260px
+       e ocupará o espaço disponível de forma responsiva */
+
+    gap: 24px;
+    /* Espaço entre os cards */
+}
+
+.card {
+    background-color: #ffffff;
+    /* Fundo branco para o card */
+
+    border-radius: 16px;
+    /* Arredonda as bordas do card */
+
+    padding: 20px;
+    /* Espaçamento interno do card */
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    /* Sombra leve para destacar o card */
+
+    transition: 0.3s;
+    /* Suaviza animações, como o hover */
+
+    border: 2px solid transparent;
+    /* Cria uma borda invisível inicialmente */
+
+    display: flex;
+    /* Ativa flexbox dentro do card */
+
+    flex-direction: column;
+    /* Organiza os elementos do card em coluna */
+
+    gap: 12px;
+    /* Espaço entre os elementos internos do card */
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    /* Ao passar o mouse, o card sobe levemente */
+
+    border-color: #ffcc00;
+    /* A borda fica amarela no hover */
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    /* A sombra fica mais forte no hover */
+}
+
+.card img {
+    width: 100%;
+    /* A imagem ocupa toda a largura do card */
+
+    height: 180px;
+    /* Define altura fixa para padronizar todos os cards */
+
+    object-fit: contain;
+    /* Faz a imagem caber inteira sem deformar */
+
+    display: block;
+    /* Remove pequenos espaços que imagens podem criar */
+}
+
+.categoria {
+    background-color: #ffcc00;
+    /* Fundo amarelo para a categoria */
+
+    color: #111;
+    /* Texto escuro */
+
+    padding: 6px 10px;
+    /* Espaçamento interno da categoria */
+
+    border-radius: 8px;
+    /* Bordas arredondadas */
+
+    font-size: 0.8rem;
+    /* Texto um pouco menor */
+
+    font-weight: bold;
+    /* Deixa o texto em negrito */
+
+    width: fit-content;
+    /* Faz a largura se ajustar somente ao texto */
+}
+
+.nome-produto {
+    font-size: 1.1rem;
+    /* Tamanho do nome do produto */
+
+    color: #111;
+    /* Cor escura */
+
+    min-height: 48px;
+    /* Define altura mínima para alinhar melhor os cards */
+}
+
+.descricao {
+    font-size: 0.95rem;
+    /* Tamanho um pouco menor para a descrição */
+
+    color: #555;
+    /* Cor cinza escuro para diferenciar do título */
+
+    line-height: 1.4;
+    /* Espaçamento entre linhas para facilitar leitura */
+
+    min-height: 80px;
+    /* Altura mínima para padronizar os cards */
+}
+
+.preco {
+    font-size: 1.5rem;
+    /* Deixa o preço maior e chamativo */
+
+    font-weight: bold;
+    /* Deixa o preço em negrito */
+
+    color: #111;
+    /* Cor escura */
+}
+
+.estrelas {
+    color: #ffcc00;
+    /* Deixa as estrelas amarelas */
+
+    font-size: 1.1rem;
+    /* Tamanho das estrelas */
+
+    letter-spacing: 2px;
+    /* Dá espaçamento entre uma estrela e outra */
+}
+
+.rodape-card {
+    margin-top: auto;
+    /* Empurra o rodapé para a parte inferior do card */
+
+    display: flex;
+    /* Ativa flexbox */
+
+    justify-content: space-between;
+    /* Distribui o conteúdo com espaço entre eles */
+
+    align-items: center;
+    /* Alinha os itens verticalmente no centro */
 }

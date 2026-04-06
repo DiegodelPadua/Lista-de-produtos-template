@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Faz a página se adaptar corretamente em celular, tablet e computador
+         width=device-width = usa a largura real da tela do dispositivo
+         initial-scale=1.0 = define o zoom inicial -->
     <link rel="stylesheet" href="./style.css">
-    <script src="./produtos.js" defer></script>
+    <script src="./script.js" type="module"></script>
     <title>Lista de Produtos</title>
 </head>
 <body>
-    
+    <header class="cabecalho">
+         <!-- Cabeçalho principal da página
+        class="cabecalho" será usada no CSS para estilizar essa área -->
+        <h1>Pádua Informática</h1>
+        <p>Ofertas em destaque</p>
+    </header>
+
+    <main class="principal">
+        <section id="container" class="container-produtos"></section>
+        <!-- Esta section começa vazia
+         O JavaScript vai preencher esta área com os cards dos produtos
+         id="container" permite localizar esse elemento no JS
+          class="container-produtos" permite aplicar o layout no CSS -->
+    </main>
 </body>
 </html>
